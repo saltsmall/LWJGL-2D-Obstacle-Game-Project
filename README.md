@@ -1,5 +1,5 @@
 # Final AP Computer Science A Project
-This game features a 2D parkour platformer challenge that the player has to complete to win the game. It was developed with Java within the Eclipse Integrated Development Environment and with the Lightweight Java Game Library. 
+This game features a 2D parkour platformer challenge that the player has to complete to win the game. It was developed with Java within the Eclipse Integrated Development Environment and with the Lightweight Java Game Library (library license info can be found below). 
 
 
 # Lightweight Java Game Library License
