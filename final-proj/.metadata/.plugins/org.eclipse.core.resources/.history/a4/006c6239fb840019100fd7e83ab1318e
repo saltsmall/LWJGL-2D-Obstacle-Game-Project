@@ -1,0 +1,31 @@
+package game.game_objects;
+
+import org.newdawn.slick.opengl.Texture;
+
+import game.Textures;
+import utilities.Constants;
+
+public class Hearts extends VisibleObject {
+	
+	Texture[] hearts = Textures.livesFrames;
+	int[] xPos = new int[hearts.length];
+	
+	public Hearts(int x, int y) {
+		xPos[0] = x;		
+		for (int i = 1; i < xPos.length; i++) { xPos[i] = x + (Constants.UNITSIZE * i); }
+		
+		this.y = y;
+		
+		width = Constants.UNITSIZE;
+		height = Constants.UNITSIZE;
+	}
+
+	public void update(int playerHealth) {
+		
+	}
+
+	public void render() {
+		for (int i = 0; i < hearts.length; i++) { Textures.render(hearts[i], xPos[i], y, width, height); } 
+	}
+
+}

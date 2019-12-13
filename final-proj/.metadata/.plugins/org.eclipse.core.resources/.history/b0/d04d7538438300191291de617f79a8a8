@@ -1,0 +1,24 @@
+package game.game_objects.blocks;
+
+import org.newdawn.slick.opengl.Texture;
+
+import game.Textures;
+import utilities.Animator;
+import utilities.Constants;
+
+public class BlockLava extends Block {
+	private Animator animator;
+	private Texture[] lavaFrames = Textures.lava;
+	
+	private boolean notAnimate, reverse;
+	
+	public BlockLava(int x, int y) {
+		super(x, y);
+		animator = new Animator(Constants.LAVAANIMATIONFPS, lavaFrames);
+		notAnimate = false;
+		
+	}
+	public void render() {
+		Textures.render(animator.animFrame(), x, y, width, height);
+	}
+}

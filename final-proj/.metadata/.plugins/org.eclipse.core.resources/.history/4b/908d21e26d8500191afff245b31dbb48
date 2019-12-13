@@ -1,0 +1,22 @@
+package managers;
+
+import game.*;
+
+public class LevelManager {
+	public static int numScenes;
+	
+	private int currScene;
+	private final Scene[] scenes = { new MainMenuScene(false), new ControlsScene(false), new StoryInfoScene(false), new ParkourLevel(true), new WinScene(false), new LoseScene(false) };
+	
+	public LevelManager() { 
+		numScenes = scenes.length; 
+		scenes[0].setup();
+	}
+	
+	public void playScene(int scene) {
+		if (currScene != scene) { scenes[currScene].clear(); }
+		
+		currScene = scene;
+		scenes[scene].run();
+	}
+}

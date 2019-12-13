@@ -1,0 +1,61 @@
+package game;
+
+import java.util.ArrayList;
+
+import org.lwjgl.input.Keyboard;
+import org.lwjgl.openal.AL;
+import org.lwjgl.opengl.Display;
+
+import managers.Textures;
+import ui.*;
+import utilities.Constants;
+import utilities.Cooldown;
+
+public abstract class Scene {	
+	protected boolean pausable;
+	protected ArrayList<Button> buttons = new ArrayList<Button>();
+	
+	private boolean pause = false;
+	private Cooldown keyCooldown = new Cooldown(0.3);
+	private PauseButton pauseButton;
+	
+	public Scene(boolean pausable) { this.pausable = pausable; }
+	
+	public void setup() {
+		if (pausable) { pauseButton = new PauseButton(Constants.GAME_WIDTH/2-Constants.UNITSIZE/2, 10, Constants.UNITSIZE, Constants.UNITSIZE, Textures.pauseButtonFrames); }
+		else { pauseButton = null; }
+	}
+	
+	public void run() {
+		while (!Display.isCloseRequested()) {	// will exit if the user pressed the x exit button on the screen (not the quit button in the game)
+			keyCooldown.update();
+			if (pausable && Keyboard.isKeyDown(Keyboard.KEY_P) && keyCooldown.isCooldownCompleted()) { 
+				togglePause(); 
+				keyCooldown.reset();
+			}
+			if (!pause) {
+	        	update();
+	        	render();
+			} 
+			if (pausable) {
+				pauseButton.pauseButtonUpdate();
+				pauseButton.pauseButtonRender();
+			}
+			Display.update();
+            Display.sync(Constants.SCREENFPS);
+        }
+		
+        Display.destroy();
+        AL.destroy();
+        System.exit(0);
+	}
+	
+	protected abstract void update();
+	protected abstract void render();
+	public abstract void clear();
+	
+	// getters/setters
+	public boolean isPaused() { return pause; }
+	public void togglePause() { pause = !pause; }
+	public boolean isSceneTransition() { return sceneTransition; }
+}

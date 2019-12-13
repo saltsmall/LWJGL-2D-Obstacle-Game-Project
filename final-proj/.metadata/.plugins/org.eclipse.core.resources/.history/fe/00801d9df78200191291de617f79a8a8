@@ -1,0 +1,9 @@
+package utilities;
+
+public class Spritesheet {
+	public final int WIDTH = Constants.UNITSIZE, HEIGHT = Constants.UNITSIZE;
+	
+	public Textures[] spliceLoad() {
+		
+	}
+}

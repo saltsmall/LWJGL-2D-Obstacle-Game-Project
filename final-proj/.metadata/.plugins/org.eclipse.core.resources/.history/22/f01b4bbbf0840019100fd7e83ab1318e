@@ -1,0 +1,104 @@
+package game.game_objects;
+
+import org.newdawn.slick.opengl.Texture;
+import utilities.*;
+
+import java.util.ArrayList;
+
+public abstract class Entity extends VisibleObject {
+	
+	protected boolean isJumping, isMoving, reverseAnim;
+	protected Animator animator;
+	
+	public Texture selectAnimationFrame() {
+		return animator.animFrame(isMoving, reverseAnim);
+	}
+	
+	public abstract void render();
+	
+	public void update() {
+		super.update();
+		animator.update();
+//		if(falling) {
+//			yVelocity += Constants.GRAVITY;
+//		}
+//		else {
+//			yVelocity = 0;
+//		}
+//		System.out.println("Position: " + x + " " + y + " Velocity: " + xVelocity);
+	}
+	
+	protected void handleAnimations() {
+		if ((xVelocity != 0 || yVelocity != 0) && !isMoving) {
+			animator.resetFrames();
+			isMoving = true; 
+		}
+		else if (xVelocity == 0 && yVelocity == 0 && isMoving) { isMoving = false; }
+	}
+	
+	public boolean touchingY(VisibleObject ob) {
+		return (this.y > ob.y && this.y < ob.y + ob.height) || (ob.y >= this.y && ob.y < this.y + this.height);
+	}
+	
+	public boolean touchingX(VisibleObject ob) {
+		return (this.x > ob.x && this.x < ob.x + ob.width) || (ob.x >= this.x && ob.x < this.x + this.width);
+	}
+	
+	public void collideStop(ArrayList<VisibleObject> collidables) {
+		for(VisibleObject ob : collidables) {
+			if(xVelocity > 0 && this.touchingY(ob)) {
+				int rightDiff = this.x + this.width - ob.x;
+				if(rightDiff >= 0 && rightDiff < 5) {
+					xVelocity = 0;
+					if(this.x + this.width > ob.x) {
+						this.x = ob.x - this.width;
+					}
+				}
+			}
+			if(xVelocity < 0 && this.touchingY(ob)) {
+				int leftDiff = ob.x + ob.width - this.x;
+				if(leftDiff >= 0 && leftDiff < 5) {
+					xVelocity = 0;
+					if(leftDiff > 0) {
+						this.x = ob.x + ob.width;
+					}
+				}
+			}
+			if(yVelocity > 0 && this.touchingX(ob)) {
+				int bottomDif = this.y + this.height - ob.y;
+				if(bottomDif >= 0 && bottomDif < ob.height) {
+					yVelocity = 0;
+					isJumping = false;
+					if(bottomDif > 0) {
+						this.y = ob.y - this.height;
+					}
+				}
+			}
+			if(yVelocity < 0 && this.touchingX(ob)) {
+				int topDif = ob.y + ob.height - this.y;
+				if(topDif >= 0 && topDif < 5) {
+					yVelocity = 0;
+					if(topDif > 0) {
+						this.y = ob.y + ob.height;
+					}
+				}
+			}
+		}
+	}
+	
+	public void jump() {
+		this.isJumping = true;
+		this.yVelocity = Constants.JUMP_VELOCITY;
+	}
+	
+	public Entity(int x, int y, double playeranimationfps) {
+		super(x, y);
+		this.width = 64;
+		this.height = 128;
+		animator = new Animator(playeranimationfps);
+	}
+	
+	public boolean moveBy(int x, int y, ArrayList<VisibleObject> collidable) {
+		return true;
+	}
+}

@@ -1,0 +1,15 @@
+package managers;
+
+public class GameManager {
+	/*
+	 * Scene 0 -> Main Menu
+	 * Scene 1 to numOfLevels -> Level(s)
+	 * Scene numLevels + 1 -> Win Screen
+	 * Scene numLevels + 2 -> Lose Screens
+	*/
+	private int scene = 0;
+	
+	public static void main(String[] args) {
+		
+	}
+}

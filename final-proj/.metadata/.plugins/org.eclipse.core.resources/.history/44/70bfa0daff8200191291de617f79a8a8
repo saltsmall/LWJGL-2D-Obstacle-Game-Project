@@ -1,0 +1,13 @@
+package managers;
+
+import game.*;
+
+public class LevelManager {
+
+	private final Level[] levels;
+	
+	public LevelManager() {
+
+	}
+
+}

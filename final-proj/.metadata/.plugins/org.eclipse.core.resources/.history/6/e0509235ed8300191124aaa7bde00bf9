@@ -1,0 +1,17 @@
+package managers;
+
+import game.*;
+
+public class LevelManager {
+	
+	int scene;
+	private final Scene[] scenes = { new ParkourLevel() };
+	
+	public LevelManager(int scene) {
+		this.scene = scene;
+	}
+	
+	public void playScene(int scene) {
+		scenes[scene].run();
+	}
+}

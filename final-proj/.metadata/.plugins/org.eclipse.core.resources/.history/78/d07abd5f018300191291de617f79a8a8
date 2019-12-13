@@ -1,0 +1,20 @@
+package managers;
+
+public class GameManager {
+	/*
+	 * Scene 0 -> Main Menu
+	 * Scene 1 to numOfLevels -> Level(s)
+	 * Scene numLevels + 1 -> Win Screen
+	 * Scene numLevels + 2 -> Lose Screens
+	*/
+	
+	public static void main(String[] args) {
+		int scene = 0;
+		System.out.println("Starting the game!");
+		RunScenes();	// eventually, we will want to start at the main menu - scene 0
+	}
+	
+	private static void RunScenes() {
+		LevelManager LM = new LevelManager(scene);
+	}
+}

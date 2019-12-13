@@ -1,0 +1,11 @@
+package managers;
+
+public class GameManager {
+	/*
+	*/
+	private int scene;
+	
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,24 @@
+package game;
+
+public class MainMenuScene extends Scene {
+
+	public MainMenuScene() {
+		
+	}
+	
+	private void mainMenuSetup() {
+		
+	}
+	
+	public void run() {
+		
+	}
+
+	protected void update() {
+		
+	}
+
+	protected void render() {
+		
+	}
+}

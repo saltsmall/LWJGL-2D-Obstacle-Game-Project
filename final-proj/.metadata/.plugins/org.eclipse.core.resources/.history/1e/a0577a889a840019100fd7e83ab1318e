@@ -1,0 +1,21 @@
+package game;
+
+public class WinScene extends Scene {
+	public WinScene() { WinSceneSetup(); }
+	
+	private void WinSceneSetup() {
+		// TODO setup buttons
+	}
+	
+	public void run() {
+		super.run();
+	}
+
+	protected void update() {
+		
+	}
+
+	protected void render() {
+		
+	}
+}

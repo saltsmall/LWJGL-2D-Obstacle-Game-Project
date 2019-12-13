@@ -1,0 +1,38 @@
+package utilities;
+
+public class Cooldown {
+	private double startTime, currTime, deltaTime;
+
+	/* LWJGL does not provide a text implementation. Therefore, I made the time limit for the parkour level hidden using this class */
+	
+	public Cooldown(double sec) {
+		startTime = System.nanoTime();
+		currTime = System.nanoTime();
+		deltaTime = sec;
+	}
+	
+	public void update() {
+		currTime += getFrameTime(); 
+	}
+	
+	public void reset() {
+		startTime = currTime;
+	}
+	
+	public boolean isCooldownCompleted() {
+		return (currTime - startTime >= deltaTime);
+	}
+	
+	// for debugging purposes
+	public void printInfo() {
+		System.out.println(currTime - startTime);
+	}
+	
+	private int getFrameTime() {
+		long last_time = System.nanoTime();
+		long time = System.nanoTime();
+		int change = (int)(time - last_time)*1000000000;
+		
+		return change;
+	}
+}

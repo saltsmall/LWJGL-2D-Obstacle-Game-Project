@@ -1,0 +1,22 @@
+package game.game_objects;
+
+import utilities.Constants;
+
+public class Hearts extends VisibleObject {
+	
+	public Hearts(int x, int y) {
+		this.x = x;
+		this.y = y;
+		width = Constants.UNITSIZE;
+		height = Constants.UNITSIZE;
+	}
+
+	public void update() {
+		
+	}
+
+	public void render() {
+		
+	}
+
+}

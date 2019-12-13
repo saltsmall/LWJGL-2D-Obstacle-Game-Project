@@ -1,0 +1,15 @@
+package game.game_objects.blocks;
+
+import game.Textures;
+import utilities.Constants;
+
+public class BlockEndPortal extends Block {
+	public BlockEndPortal(int x, int y) {
+		super(x + 10, y);
+		this.width = Constants.UNITSIZE - 20;
+		this.height = Constants.UNITSIZE * 2;
+	}
+	public void render() {
+		Textures.render(Textures.endportal, x, y, width, height);
+	}
+}

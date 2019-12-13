@@ -1,0 +1,23 @@
+package utilities;
+
+public class Cooldown {
+	private double startTime, currTime, deltaTime;
+	
+	public Cooldown(double sec) {
+		startTime = System.currentTimeMillis();
+		currTime = System.currentTimeMillis();
+		deltaTime = 1000*sec;
+	}
+	
+	public void update() {
+		
+	}
+	
+	public void resetCooldown() {
+		startTime = currTime;
+	}
+	
+	public boolean isCooldownCompleted() {
+		
+	}
+}

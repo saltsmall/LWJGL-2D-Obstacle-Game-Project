@@ -1,0 +1,14 @@
+package game.game_objects;
+
+public class Heart extends VisibleObject {
+	
+	private boolean isActive = false;
+	
+	public void update() {
+		
+	}
+
+	public void render() {
+		
+	}
+}

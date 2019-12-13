@@ -1,0 +1,15 @@
+package game.game_objects;
+
+public class Flame extends VisibleObject {
+
+	public void update() {
+
+	}
+
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

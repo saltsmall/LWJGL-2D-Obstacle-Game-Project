@@ -1,0 +1,31 @@
+package game;
+
+import ui.Button;
+import utilities.Constants;
+
+public class LoseScene extends Scene {
+	private Button playAgainButton, mainMenuButton, quitButton;
+	
+	public LoseScene(boolean pausable) { super(pausable); }
+	
+	public void setup() {
+		playAgainButton = new Button(Constants.GAME_WIDTH/2-Constants.UNITSIZE*2, Constants.GAME_HEIGHT-Constants.UNITSIZE*4-20, Constants.UNITSIZE*4, Constants.UNITSIZE*2, Textures.playAgainButtonFrames, 3);
+		mainMenuButton = new Button(Constants.GAME_WIDTH/2-Constants.UNITSIZE*2, Constants.GAME_HEIGHT-Constants.UNITSIZE*4-20, Constants.UNITSIZE*4, Constants.UNITSIZE*2, Textures.playAgainButtonFrames, 0);
+		quitButton = new Button(Constants.GAME_WIDTH/2-Constants.UNITSIZE*2, 200+playAgainButton.height+20, Constants.UNITSIZE*4, Constants.UNITSIZE*2, Textures.quitButtonFrames, -1);
+		buttons.add(playAgainButton);
+		buttons.add(quitButton);
+	}
+
+	protected void update() {
+		for (Button b : buttons) { b.update(); }
+	}
+
+	protected void render() {
+		Textures.render(Textures.loseScreen);
+		for (Button b : buttons) { b.render(); }
+	}
+	
+	public void clear() {
+		buttons.clear();
+	}
+}

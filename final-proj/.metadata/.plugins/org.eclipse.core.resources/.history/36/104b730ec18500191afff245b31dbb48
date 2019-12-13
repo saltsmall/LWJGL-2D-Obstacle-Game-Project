@@ -1,0 +1,18 @@
+package game.game_objects;
+
+public class Flame extends VisibleObject {
+
+	public Flame(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public void update() {
+
+	}
+
+	public void render() {
+
+	}
+
+}

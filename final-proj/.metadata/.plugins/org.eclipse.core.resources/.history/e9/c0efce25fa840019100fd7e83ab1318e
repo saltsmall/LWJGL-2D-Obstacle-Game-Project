@@ -1,0 +1,25 @@
+package game.game_objects;
+
+import game.Textures;
+import utilities.Constants;
+
+public class Hearts extends VisibleObject {
+	
+	Textures[] hearts = Textures.livesFrames;
+	
+	public Hearts(int x, int y) {
+		this.x = x;
+		this.y = y;
+		width = Constants.UNITSIZE;
+		height = Constants.UNITSIZE;
+	}
+
+	public void update() {
+		
+	}
+
+	public void render() {
+		
+	}
+
+}

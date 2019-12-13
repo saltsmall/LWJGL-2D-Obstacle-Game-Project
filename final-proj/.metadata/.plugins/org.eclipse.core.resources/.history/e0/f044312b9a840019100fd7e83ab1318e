@@ -1,0 +1,11 @@
+package managers;
+
+import game.*;
+
+public class LevelManager {
+	private final Scene[] scenes = { new MainMenuScene(), new StoryInfoScene(), new ParkourLevel(), new WinScene(), new LoseScene() };
+	
+	public static void playScene(int scene) {;
+		scenes[scene].run();
+	}
+}

@@ -1,0 +1,22 @@
+package game;
+
+public class MainMenuScene extends Scene {
+
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void render() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

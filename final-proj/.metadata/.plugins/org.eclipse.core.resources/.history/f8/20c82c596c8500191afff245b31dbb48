@@ -1,0 +1,20 @@
+package game;
+
+public class ControlsScene extends Scene {
+
+	public ControlsScene(boolean pausable) { super(pausable); }
+
+	protected void update() {
+		
+		// TODO update buttons
+	}
+
+	protected void render() {
+		Textures.render(Textures.controlsScreen);
+		// TODO render buttons
+	}
+
+	public void clear() {
+		// TODO clear buttons
+	}
+}

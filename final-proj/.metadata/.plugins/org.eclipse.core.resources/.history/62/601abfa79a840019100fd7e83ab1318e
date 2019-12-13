@@ -1,0 +1,21 @@
+package game;
+
+public class MainMenuScene extends Scene {
+	public MainMenuScene() { MainMenuSceneSetup(); }
+	
+	private void MainMenuSceneSetup() {
+		// TODO setup buttons
+	}
+	
+	public void run() {
+		super.run();
+	}
+
+	protected void update() {
+		// TODO respond to button clicks
+	}
+
+	protected void render() {
+		Textures.render(Textures.mainMenuBackground);
+	}
+}

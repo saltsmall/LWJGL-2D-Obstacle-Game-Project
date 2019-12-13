@@ -1,0 +1,11 @@
+package managers;
+
+public class LevelManager {
+
+	Level[] levels;
+	
+	public LevelManager() {
+
+	}
+
+}

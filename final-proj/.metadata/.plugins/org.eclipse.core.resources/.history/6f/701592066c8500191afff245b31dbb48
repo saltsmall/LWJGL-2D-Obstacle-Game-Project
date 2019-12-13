@@ -1,0 +1,22 @@
+package game;
+
+public class ControlsScene extends Scene {
+
+	public ControlsScene(boolean pausable) { super(pausable); }
+
+	protected void update() {
+
+	}
+
+	protected void render() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

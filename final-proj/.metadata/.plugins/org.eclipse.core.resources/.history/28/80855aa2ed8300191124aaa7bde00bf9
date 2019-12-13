@@ -1,0 +1,22 @@
+package game.game_objects;
+
+public class Projectile {
+	private double xDirection;
+	private double yDirection;
+	
+	public Projectile(double xDirection, double yDirection) {
+		this.xDirection = xDirection;
+		this.setyDirection(yDirection);
+	}
+
+	// getters/settesr
+	public double getyDirection() {
+		return yDirection;
+	}
+
+	public void setyDirection(double yDirection) {
+		this.yDirection = yDirection;
+	}
+	
+	
+}

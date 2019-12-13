@@ -1,0 +1,16 @@
+1559230981062	Move compilation unit
+1559230997279	Move compilation units
+1559231740230	Delete element
+1559231751314	Move compilation unit
+1559233464907	Move compilation unit
+1559236379521	Delete elements
+1559246383486	Rename field 'falling'
+1559259279182	Rename method 'resetFrame'
+1559259545668	Rename field 'gameOver'
+1559261594183	Rename method 'getCurrentFrame'
+1559261608214	Rename method 'resetFrame'
+1559261612314	Rename method 'setFrame'
+1559261620897	Rename field 'changingFrame'
+1559317775655	Rename field 'levels'
+1559339220949	Encapsulate field 'yDirection'
+1559339232013	Encapsulate field 'xDirection'

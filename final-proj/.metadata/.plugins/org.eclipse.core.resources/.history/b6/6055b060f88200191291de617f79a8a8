@@ -1,0 +1,15 @@
+package utilities;
+
+import game.Textures;
+import org.newdawn.slick.opengl.Texture;
+import org.newdawn.slick.opengl.TextureLoader;
+
+public class Spritesheet {
+	public final int WIDTH = Constants.UNITSIZE, HEIGHT = Constants.UNITSIZE;
+	
+	public static Texture[] spliceLoad(String[] paths, String type) {
+		int numOfSprites = path.length;
+		Texture[] sprites = new Texture[paths.length];
+		for (int i = 0; i)
+	}
+}

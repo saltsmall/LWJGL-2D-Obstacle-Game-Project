@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="utilities.Spritesheet"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="game.game_objects.Entity"/>
+<fullyQualifiedTypeName name="game.game_objects.EntityPlayer"/>
+<fullyQualifiedTypeName name="game.game_objects.VisibleObject"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.opengl.Texture"/>
+<fullyQualifiedTypeName name="org.lwjgl.input.Mouse"/>
+<fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
+<fullyQualifiedTypeName name="java.awt.Button"/>
+<fullyQualifiedTypeName name="ui.Button"/>
+<fullyQualifiedTypeName name="ui.PauseButton"/>
+<fullyQualifiedTypeName name="game.Textures"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.openal.Audio"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.openal.AudioLoader"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.util.ResourceLoader"/>
+<fullyQualifiedTypeName name="org.lwjgl.openal.AL"/>
+<fullyQualifiedTypeName name="utilities.AudioType"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="game.game_objects.blocks.BlockLava"/>
+<fullyQualifiedTypeName name="utilities.Cooldown"/>
+<fullyQualifiedTypeName name="managers.GameManager"/>
+<fullyQualifiedTypeName name="utilities.Constants"/>
+<fullyQualifiedTypeName name="utilities.Animator"/>
+<fullyQualifiedTypeName name="managers.Textures"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.TrueTypeFont"/>
+<fullyQualifiedTypeName name="managers.Sounds"/>
+</qualifiedTypeNameHistroy>

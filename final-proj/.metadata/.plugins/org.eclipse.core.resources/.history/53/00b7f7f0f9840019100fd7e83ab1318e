@@ -1,0 +1,18 @@
+package game.game_objects;
+
+public class Hearts extends VisibleObject {
+	
+	public Hearts(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	public void update() {
+		
+	}
+
+	public void render() {
+		
+	}
+
+}

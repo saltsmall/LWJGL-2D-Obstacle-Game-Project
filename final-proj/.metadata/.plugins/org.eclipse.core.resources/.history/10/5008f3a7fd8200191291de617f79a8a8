@@ -1,0 +1,15 @@
+package game.game_objects.blocks;
+
+import game.Textures;
+
+public class BlockEndPortal extends Block {
+	public BlockEndPortal(int x, int y) {
+		super(x, y);
+		this.width = 64;
+		this.height = 128;
+	}
+	public void render() {
+		
+		Textures.render(Textures.endportal, x, y, width, height);
+	}
+}

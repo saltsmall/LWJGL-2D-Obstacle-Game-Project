@@ -1,0 +1,46 @@
+package game;
+
+import org.lwjgl.input.Keyboard;
+
+import managers.GameManager;
+import ui.Button;
+import utilities.Constants;
+
+/* MainMenuScene takes charge in instantiating the single LWJGL instance. */
+public class MainMenuScene extends Scene {	
+	private Button playButton, controlsButton, quitButton;
+	
+	public MainMenuScene(boolean pausable) { super(pausable); }
+	
+	public void setup() {
+		playButton = new Button(Constants.GAME_WIDTH/2-Constants.UNITSIZE*2, 200, Constants.UNITSIZE*4, Constants.UNITSIZE*2, Textures.playButtonFrames, 1);
+		controlsButton = new Button(Constants.GAME_WIDTH/2-Constants.UNITSIZE*2, 200+playButton.height+20, Constants.UNITSIZE*4, Constants.UNITSIZE*2, Textures.controlsButtonFrames, 1);
+		quitButton = new Button(Constants.GAME_WIDTH/2-Constants.UNITSIZE*2, 200+(controlsButton.height*2)+20, Constants.UNITSIZE*4, Constants.UNITSIZE*2, Textures.quitButtonFrames, 1);
+		buttons.add(playButton);
+		buttons.add(controlsButton);
+		buttons.add(quitButton);
+	}
+
+	protected void update() {
+		if (Keyboard.isKeyDown(Keyboard.KEY_T)) {
+			GameManager.RunScene(2);	// story scene
+		} else if (Keyboard.isKeyDown(Keyboard.KEY_C)) {
+			GameManager.RunScene(1);	// controls scene
+		}
+		// TODO respond to button clicks
+		for (Button b : buttons) {
+			b.update();
+		}
+	}
+
+	protected void render() {
+		Textures.render(Textures.mainMenuBackground);
+		for (Button b : buttons) {
+			b.render();
+		}
+	}
+	
+	public void clear() {
+		buttons.clear();
+	}
+}

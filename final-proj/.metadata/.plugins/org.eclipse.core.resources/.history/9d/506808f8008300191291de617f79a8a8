@@ -1,0 +1,15 @@
+package managers;
+
+public class GameManager {
+	/*
+	 * Scene 0 -> Main Menu
+	 * Scene 1 to numOfLevels -> Level(s)
+	 * Scene numLevels + 1 -> Wing Screen
+	 * 
+	*/
+	private int scene;
+	
+	public static void main(String[] args) {
+		
+	}
+}
