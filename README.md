@@ -3,7 +3,7 @@ This game features a 2D parkour platformer challenge that the player has to comp
 
 ![Screenshot_Of_Game](https://github.com/JessHua159/2D-Obstacle-Game-Project/blob/master/Screenshot_Of_Game.PNG)
 
-It was developed with [Java](https://www.java.com/en/) within the [Eclipse Integrated Development Environment](https://www.eclipse.org/ide/) and with the [Lightweight Java Game Library](https://www.lwjgl.org/) (library license info can be found below). 
+It was developed with [Java](https://www.java.com/en/) within the [Eclipse Integrated Development Environment](https://www.eclipse.org/ide/) and with the [Lightweight Java Game Library](https://www.lwjgl.org/) ([library license](https://www.lwjgl.org/license) info can be found below). 
 
 # Lightweight Java Game Library License
 Copyright © 2012-present Lightweight Java Game Library
