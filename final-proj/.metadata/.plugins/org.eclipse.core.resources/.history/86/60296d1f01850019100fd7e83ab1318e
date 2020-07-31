@@ -1,9 +1,0 @@
-package utilities;
-
-public class Cooldown {
-	private double currTime, deltaTime;
-	
-	public Cooldown(double sec) {
-		
-	}
-}

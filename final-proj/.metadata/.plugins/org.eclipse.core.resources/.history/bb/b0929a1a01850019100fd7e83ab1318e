@@ -1,7 +1,0 @@
-package utilities;
-
-public class Cooldown {
-	public Cooldown(double sec) {
-		
-	}
-}

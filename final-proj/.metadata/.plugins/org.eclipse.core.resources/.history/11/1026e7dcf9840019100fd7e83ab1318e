@@ -1,5 +1,0 @@
-package game.game_objects;
-
-public class Hearts extends VisibleObject {
-
-}
